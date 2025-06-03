@@ -1,0 +1,8 @@
+#Instructions for Compiling and Running Lake Ontario EFDC TP Model
+
+What you need to run the model:
+1. A model run directory in GLHABs or GLFBREEZ (GLHABS preferred)
+    Create a subdirectory in either directory depending on which year you want to run:
+           /work/GLHABS/GreatLakesEco/LakeOntario/Model_Runs/2013 
+           /work/GLHABS/GreatLakesEco/LakeOntario/Model_Runs/2018
+    
