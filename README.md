@@ -61,7 +61,6 @@ date
 
 cp  /work/GLHABS/GreatLakesEco/LakeOntario/Model_Runs/2018/LO2/
 
-################################################################################
 # To update river loads:
 
 Netcdf files for river load scenarios exist in /work/GLFBREEZ/Lake_Ontario/River_Loads
