@@ -57,5 +57,63 @@ mpirun ./CGEM gomdom GD_InputFile_TP Initial_Conditions.nc
 date
 ~
 
-
 cp  /work/GLHABS/GreatLakesEco/LakeOntario/Model_Runs/2018/LO2/
+
+################################################################################
+# To update river loads:
+
+Netcdf files for river load scenarios exist in /work/GLFBREEZ/Lake_Ontario/River_Loads
+
+The "default" scenario is TP_RiverLoads_2013.nc and TP_RiverLoads_2018.nc
+
+1. Before running the model, check which scenario is currently loaded in the executable in the RiverLoad.F90 file in:
+/work/GLFBREEZ/Lake_Ontario/MPI_code
+
+2. Open RiverLoad.F90 with favorite text editor
+
+Modify line 115 (search 'set filenames for netCDF')
+Edit the netcdf file to the scenario you choose.
+Save and close file.
+
+3. Go up one directory. (cd ..)
+4. recompile the executable to update it with current river load scenario
+Run the following:
+
+module load intel/23.2
+module load intelmpi/23.2
+module load netcdf/4.9.2
+module load pnetcdf/1.12.3
+
+make clean
+
+make -f Makefile_par
+
+5. Once the program finishes compiling, copy the executable to your model run directory.
+
+##############################################################################
+# To create a new river load scenario:
+
+We have an R script for updating the netcdfs from .csv files.
+Loading data starts on 1/1 and ends on 12/31/
+Units are in kg/s
+Rivers are stored as numbers in a specific sequence:
+1 = Niagara River
+2 = Eighteenmile Creek
+3 = Oak Orchard Creek
+4 = Genesee River
+5 = Oswego River
+6 = Black River
+7 = Twelve Mile Creek
+8 = Trent River
+9 = Humber River
+
+1. Update the netcdf file by copying a previous version and renaming it.
+Example;
+
+cp TP_RiverLoads_2018.nc TP_RiverLoads_2018_newscenario.nc
+
+2. Run R script to update the new netcdf
+
+3. copy updated netcdf into /work/GLFBREEZ/Lake_Ontario/CGEM/CGEM/data/Lake_Ontario/INPUT
+
+4. Follow steps in update river loads (above) to update RiverLoad.F90 and recompile executable.
