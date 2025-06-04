@@ -91,7 +91,6 @@ make -f Makefile_par
 
 5. Once the program finishes compiling, copy the executable to your model run directory.
 
-##############################################################################
 # To create a new river load scenario:
 
 We have an R script for updating the netcdfs from .csv files.
