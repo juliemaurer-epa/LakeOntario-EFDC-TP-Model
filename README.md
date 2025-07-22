@@ -8,7 +8,7 @@ What you need to run the model:
            /work/GLHABS/GreatLakesEco/LakeOntario/Model_Runs/2018
 
 ```
-mkdir   /work/GLHABS/GreatLakesEco/LakeOntario/Model_Runs/2018/LO_test
+mkdir /work/GLHABS/GreatLakesEco/LakeOntario/Model_Runs/2018/LO_test
 ```
 
 2. A compiled executable (CGEM) copied into the model run directory
