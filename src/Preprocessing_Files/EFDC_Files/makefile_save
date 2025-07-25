@@ -1,0 +1,21 @@
+FCOMP = ifort
+FFLAGS = -warn all -traceback -no-diag-error-limit -implicitnone -convert little_endian -ftz
+
+PROGRAM = IJ_Depth_NZ.exe
+OBJECTS = IJ_Depth_NZ.o
+LIBS =
+EXE = IJ_Depth_NZ.exe
+
+all: $(PROGRAM)
+
+$(PROGRAM): $(OBJECTS)
+	$(FCOMP) -o $(EXE) $(OBJECTS) $(LIBS)
+
+$(OBJECTS):%.o: %.F90
+	$(FCOMP) -c $(FFLAGS) $<
+
+clean:
+	rm -f *.o *.mod *.MOD
+
+veryclean: clean
+	rm -f *~ $(PROGRAM)
