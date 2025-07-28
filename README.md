@@ -1,6 +1,9 @@
 # LakeOntario-EFDC-TP-Model
 Repository for model files, run scenarios, and methods for visualizing/analyzing output
 
+The coupled Lake Ontario EFDC-TP Model utilizes the Environmental Fluid Dynamics Code (EFDC) and associated computational grid to simulate hydrodynamic processes in Lake Ontario. 
+The EFDC model is coupled with the Lake Ontario Total Phosphorus model, which utilizes the Community General Ecosystem Model (CGEM) to calculate and simulate total phosphorus fate and transport.
+
 What you need to run the model:
 1. A model run directory in GLHABs or GLFBREEZ (GLHABS preferred)
     Create a subdirectory in either directory depending on which year you want to run:
