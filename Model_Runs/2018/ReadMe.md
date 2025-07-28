@@ -1,4 +1,4 @@
-# Simulation period: April 1st, 2013 - September 30th, 2013.
+# Simulation period: April 1st, 2018 - September 30th, 2018
 
 The files within each folder contain:
 
